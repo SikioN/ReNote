@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home page
+{% endblock %}
+
+{% block content %}
+    <h1>Последние посты</h1>
+    {% for article in content %}
+    <article>
+        <h2>
+            {{ content.title }}
+        </h2>
+        <p>{{ content.body }}</p>
+        <p><small>Иванов Иван, 5 минут назад</small></p>
+        <p><a href="#">Читать дальше</a></p>
+    </article>
+    {% endfor %}
+{% endblock %}
