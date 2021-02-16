@@ -91,3 +91,37 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
+.col-12 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x)/ 2);
+    padding-left: calc(var(--bs-gutter-x)/ 2);
+    margin-top: var(--bs-gutter-y);
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+.g-3, .gy-3 {
+    --bs-gutter-y: 1rem;
+}
+.g-3, .gx-3 {
+    --bs-gutter-x: 1rem;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x)/ -2);
+    margin-left: calc(var(--bs-gutter-x)/ -2);
