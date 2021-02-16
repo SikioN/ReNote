@@ -1,7 +1,6 @@
 from flask import Flask, render_template
 from content import contents
 
-
 app = Flask(__name__)
 
 

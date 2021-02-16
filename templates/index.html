@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Home page
+Home page
 {% endblock %}
 
 {% block content %}
-    <h1>{{ contents[0].title }}</h1>
-    {% for contents in contents %}
-    <div>
-        <p><big>{{ contents.body }}</big></p>
-    </div>
-    {% endfor %}
-    <div>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-        <p>   </p>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-        <p>   </p>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-    </div>
+<h1>{{ contents[0].title }}</h1>
+{% for contents in contents %}
+<div>
+    <p><big>{{ contents.body }}</big></p>
+</div>
+{% endfor %}
+<div>
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+    <p></p>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+    <p></p>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+</div>
 {% endblock %}
