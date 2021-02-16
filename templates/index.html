@@ -5,15 +5,17 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Последние посты</h1>
-    {% for article in content %}
-    <article>
-        <h2>
-            {{ content.title }}
-        </h2>
-        <p>{{ content.body }}</p>
-        <p><small>Иванов Иван, 5 минут назад</small></p>
-        <p><a href="#">Читать дальше</a></p>
-    </article>
+    <h1>{{ contents[0].title }}</h1>
+    {% for contents in contents %}
+    <div>
+        <p><big>{{ contents.body }}</big></p>
+    </div>
     {% endfor %}
+    <div>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+        <p>   </p>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+        <p>   </p>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    </div>
 {% endblock %}
