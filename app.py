@@ -14,5 +14,10 @@ def checkout():
     return render_template('content.html')
 
 
+@app.route('/pers_acc')
+def pers_acc():
+    return render_template('personal_account.html')
+
+
 if __name__ == '__main__':
     app.run()
