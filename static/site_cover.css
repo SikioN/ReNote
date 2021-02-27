@@ -176,3 +176,7 @@ html {
 *, ::after, ::before {
     box-sizing: border-box;
 }
+
+.w-35 {
+  width: 35% !important;
+}
