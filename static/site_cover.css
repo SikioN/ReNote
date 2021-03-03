@@ -180,3 +180,11 @@ html {
 .w-35 {
   width: 35% !important;
 }
+
+.bg-dark-main {
+  background-color: #33363d !important;
+}
+
+.bg-dark-header {
+  background-color: #1a1c20 !important;
+}
