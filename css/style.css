@@ -17,6 +17,7 @@ ul.dws-ul {
 li.dws-li {
     list-style: none;
     padding: 10px;
+    z-index: 10000;
 }
 
 li.dws-li a {
@@ -34,7 +35,7 @@ li.dws-li a::before {
     content: '';
     width: 0;
     height: 3px;
-    background-color: #ff0000;
+    background-color: #fff;
     position: absolute;
     top: 100%;
     left: 0;
@@ -46,7 +47,7 @@ li.dws-li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background-color: #0015ff;
+    background-color: #fff;
     position: absolute;
     top: 100%;
     right: 0;

@@ -1,23 +1,115 @@
 body {
-    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .0);
-    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .0);
-    font-family: 'Noto Sans JP', sans-serif;
-}
-
-.w-35 {
-    width: 35% !important;
-}
-
-.bg-dark-body {
     background-color: #1e2026 !important;
+    color: #fff !important;
 }
 
-.bg-dark-header {
-    background-color: #26282f !important;
+main {
+    height: 2000px;
+}
+
+.font-semi-bold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.font-regular {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.bg-dark-side-bar {
+    background-color: #2d303b !important;
 }
 
 .dws-menu {
+    margin-top: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    width: 100%;
+}
+
+ul.dws-ul {
     display: flex;
-    padding: 3rem;
-    justify-content: center;
+    padding: 3px;
+    justify-content: right;
+}
+
+li.dws-li {
+    list-style: none;
+    padding: 10px;
+    z-index: 10000;
+}
+
+li.dws-li a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #ffffff;
+    position: relative;
+}
+
+li.dws-li a i {
+    margin-right: 10px;
+}
+
+li.dws-li a::before {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: .5s;
+    mix-blend-mode: multiply;
+}
+
+li.dws-li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    transition: .5s;
+    mix-blend-mode: multiply;
+}
+
+
+li.dws-li:hover a::before {
+    width: 50%;
+    transform: translateX(100%);
+}
+
+li.dws-li:hover a::after {
+    width: 50%;
+    transform: translateX(-100%);
+}
+
+
+ul.dws-ul-1 {
+    display: flex;
+    padding: 0;
+    justify-content: right;
+}
+
+li.dws-li-1 {
+    list-style: none;
+    padding: 0;
+    z-index: 10000;
+}
+
+li.dws-li-1 a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #6c757d;
+    position: relative;
+}
+
+li.dws-li-1 a:hover {
+    color: #eaeaea;
+}
+
+.pt-3 {
+    padding-top: 1rem !important;
 }
