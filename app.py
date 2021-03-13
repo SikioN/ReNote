@@ -19,5 +19,10 @@ def pers_acc():
     return render_template('personal_account.html')
 
 
+@app.route('/notification')
+def pers_acc_notifications():
+    return render_template('pers_acc_notifications.html')
+
+
 if __name__ == '__main__':
     app.run()

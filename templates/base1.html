@@ -1,31 +1,125 @@
-<!doctype html>
-<html lang="en" class="h-100">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <title>Personal Account</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <link href="static/bootstrap.css" rel="stylesheet">
-    <link href="static/site_cover.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <title>
-        {% block title %}
-        ReNote
-        {% endblock %}
-    </title>
+
+
+    <link href="../static/site_cover.css" rel="stylesheet">
+    <link href="../static/bootstrap.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext"
+          rel="stylesheet">
 </head>
-<body class="d-flex h-100 text-white bg-dark">
-<div class="cover-container d-flex w-100 h-100 p-3 flex-column">
+<body class="text-white bg-dark-body">
+<div class="row grey_a">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse bg-dark-side-bar">
+            <div class="position-sticky dws-menu">
+                <h6 class="justify-content-between align-items-center mt-4 mb-1 text-muted font-semi-bold">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                         class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
+                    Your Account
+                </h6>
+                <h6 class="justify-content-between align-items-center mt-4 mb-1 text-muted font-semi-bold">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round" class="feather feather-home">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    Menu
+                    <a class="link-secondary" href="#" aria-label="Add a new report">
+                    </a>
+                </h6>
+                <ul class="nav flex-column dws-ul-1 font-regular">
+                    <li class="nav-item dws-li-1">
+                        <a class="nav-link active" style="text-indent: 0.65rem" aria-current="page" href="#">
+                            Getting started
+                        </a>
+                    </li>
+                    <li class="nav-item dws-li-1">
+                        <a class="nav-link" style="text-indent: 0.65rem" href="#">
+                            Summary
+                        </a>
+                    </li>
+                    <li class="nav-item dws-li-1">
+                        <a class="nav-link" style="text-indent: 0.65rem" href="#">
+                            Integrations
+                        </a>
+                    </li>
+                </ul>
 
-    {% block content %}
-    {% endblock %}
+                <h6 class="justify-content-between align-items-center mt-4 mb-1 text-muted font-semi-bold">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round" class="feather feather-file-text">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    Recent
+                    <a class="link-secondary" href="#" aria-label="Add a new report">
+                    </a>
+                </h6>
+                <ul class="nav flex-column mb-2 dws-ul-1 font-regular">
+                    <li class="nav-item dws-li-1">
+                        <a class="nav-link" style="text-indent: 0.65rem" href="#">
+                            Current month
+                        </a>
+                    </li>
+                    <li class="nav-item dws-li-1">
+                        <a class="nav-link" style="text-indent: 0.65rem" href="#">
+                            Last quarter
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
+
+        <main class="col-md-9 ms-sm-auto col-lg-83 px-md-4">
+
+            <div class="dws-1">
+                <div class="dws-menu">
+                    <ul class="dws-ul font-regular">
+                        <li class="dws-li"><a href="#">Back</a></li>
+                        <li class="dws-li"><a href="#">Features</a></li>
+                        <li class="dws-li"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-3 border-bottom">
+                <h1 class="h2 font-semi-bold">Dashboard</h1>
+                <div class="btn-toolbar mb-2 mb-md-0 font-regular">
+                    <div class="btn-group me-2">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                    </div>
+                    <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle font-regular">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="feather feather-calendar">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        This week
+                    </button>
+                </div>
+            </div>
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
             crossorigin="anonymous"></script>
-    <footer class="mt-auto text-white-50">
-        <p></p>
-    </footer>
-</div>
+
 </body>
 </html>

@@ -1,0 +1,43 @@
+{% extends 'base1.html' %}
+
+{% block title %}
+Personal account
+{% endblock %}
+
+{% block content %}
+<div class="row mb-2">
+    <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary">Your notification</strong>
+                <form>
+                    <div class="container px-4">
+                        <div class="row gx-5">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="inputDate">Pick the date:</label>
+                                    <input type="date" class="form-control" id="inputDate">
+                                </div>
+                            </div>
+                            <div class="col mt-4">
+                                <div class="form-group">
+                                    <label for="time">Time:</label>
+                                    <input type="time" id="time" name="time"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <textarea class="form-control-lg mt-4 bg-dark-side-bar text-light" id="exampleFormControlTextarea1" rows="4"
+                          placeholder="Put your text"></textarea>
+            </div>
+            <div class="col d-none d-lg-block">
+                <svg class="bd-placeholder-img" width="150" height="250" xmlns="http://www.w3.org/2000/svg"
+                     preserveAspectRatio="xMidYMid slice" focusable="false">>
+                </svg>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
