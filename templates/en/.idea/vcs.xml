@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/Base_dark" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Base_light" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Checkout_dark" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Checkout_light" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Forgot_Password_dark" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Forgot_Password_light" vcs="Git" />
+  </component>
+</project>
