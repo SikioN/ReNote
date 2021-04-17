@@ -1,20 +1,18 @@
 {% extends 'base1.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
 
 {% block title %}
 Personal account
 {% endblock %}
 
 {% block content %}
-<div class="container overflow-hidden">
-    <div class="row gx-3">
-        <div class="col">
-            <label for="exampleFormControlTextarea1" class="form-label">Here you can create your summary</label>
-            <textarea class="form-control bg-dark-side-bar text-light" id="exampleFormControlTextarea1" rows="10" placeholder="Put your text"></textarea>
-        </div>
-    </div>
-    <div class="btn-group me-2 mt-3">
-        <button type="button" class="btn btn-sm btn-outline-secondary">Save</button>
-    </div>
-</div>
+
+            <form action="{{ url_for('pers_acc') }}" method="post" >
+                {{ form.csrf }}
+                {{ form.text(class_='form-control bg-dark-side-bar text-light') }}
+                <br>
+                {{ form.submit(class='btn btn-sm btn-outline-secondary') }}
+            </form>
 
 {% endblock %}

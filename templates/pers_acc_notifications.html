@@ -1,35 +1,108 @@
-{% extends 'base1.html' %}
 
-{% block title %}
-Personal account
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+<!--    <link href="../static/site_cover.css" rel="stylesheet">-->
+<!--    <link href="../static/bootstrap.css" rel="stylesheet">-->
+<!--    <link rel="preconnect" href="https://fonts.gstatic.com">-->
+<!--    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext"-->
+<!--          rel="stylesheet">-->
+    <title>Personal Account</title>
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
 
+</head>
 {% block content %}
+<body>
+<header class="header">
+    <div class="header__container">
+        <div></div>
+        <div class="header__toggle" style="justify-content: right">
+            <i class='fas fa-chevron-circle-right nav__icon' id="header-toggle"></i>
+        </div>
+    </div>
+</header>
+
+<div class="nav" id="navbar">
+    <nav class="nav__container">
+        <div>
+
+            <a href="#" class="nav__link nav__logo">
+                <span class="nav__logo-name">ReNote</span>
+            </a>
+
+            <div class="nav__list">
+                <div class="nav__items">
+                    <h3 class="nav__subtitle">Profile</h3>
+
+
+                    <a href="{{ url_for('main') }}" class="nav__link">
+                        <i class="fas fa-home nav__icon"></i>
+                        <span class="nav__name">My Summaries</span>
+                    </a>
+
+                </div>
+
+                <div class="nav__items">
+                    <h3 class="nav__subtitle">Menu</h3>
+
+                    <a href="{{ url_for('create_notification') }}" class="nav__link">
+                        <i class="fas fa-bell nav__icon"></i>
+                        <span class="nav__name">Notifications</span>
+                    </a>
+
+                    <a href="{{ url_for('new_summary') }}" class="nav__link">
+                        <i class="fas fa-sticky-note nav__icon"></i>
+                        <span class="nav__name">Create Summaries</span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <a href="{{ url_for('logout') }}" class="nav__link nav__logout">
+            <i class="fas fa-sign-out-alt nav__icon"></i>
+            <span class="nav__name">Log Out</span>
+        </a>
+
+    </nav>
+</div>
+
+
+<main>
 <div class="row mb-2">
     <div class="col-md-6">
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static">
                 <strong class="d-inline-block mb-2 text-primary">Your notification</strong>
-                <form>
+                <form action="" method="post">
+
                     <div class="container px-4">
                         <div class="row gx-5">
                             <div class="col">
-                                <div class="form-group">
-                                    <label for="inputDate">Pick the date:</label>
-                                    <input type="date" class="form-control" id="inputDate">
-                                </div>
+                                {{form.datetime.label}}
+                                {{ form.datetime(class_='') }}
                             </div>
-                            <div class="col mt-4">
-                                <div class="form-group">
-                                    <label for="time">Time:</label>
-                                    <input type="time" id="time" name="time"/>
-                                </div>
-                            </div>
+                            <p></p>
+                            {{ form.note(class_='form-control-lg mt-4 bg-dark-side-bar text-light rows=3') }}
                         </div>
                     </div>
+
+<!--                <textarea class="form-control-lg mt-4 bg-dark-side-bar text-light" id="exampleFormControlTextarea1" rows="4"-->
+<!--                          placeholder="Put your text"></textarea>-->
+                     <div class="login-content">
+                        <div style="padding: 2rem">
+                            {{ form.submit(class='btn') }}
+                        </div>
+                     </div>
                 </form>
-                <textarea class="form-control-lg mt-4 bg-dark-side-bar text-light" id="exampleFormControlTextarea1" rows="4"
-                          placeholder="Put your text"></textarea>
             </div>
             <div class="col d-none d-lg-block">
                 <svg class="bd-placeholder-img" width="150" height="250" xmlns="http://www.w3.org/2000/svg"
@@ -40,4 +113,42 @@ Personal account
         </div>
     </div>
 </div>
+
+
+</main>
+
+<script>
+    const inputs = document.querySelectorAll(".input");
+
+    function addcl() {
+        let parent = this.parentNode.parentNode;
+        parent.classList.add("focus");
+    }
+
+    function remcl() {
+        let parent = this.parentNode.parentNode;
+        if (this.value == "") {
+            parent.classList.remove("focus");
+        }
+    }
+
+
+    inputs.forEach(input => {
+        input.addEventListener("focus", addcl);
+        input.addEventListener("blur", remcl);
+    });
+
+</script>
+
+<script type="text/javascript">
+    function auto_grow(element) {
+        element.style.height = "80%";
+        element.style.height = (element.scrollHeight) + "px";
+    }
+</script>
+
+
+<script src="../static/js/main.js"></script>
+</body>
 {% endblock %}
+</html>

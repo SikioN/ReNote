@@ -1,0 +1,7 @@
+<p>Уважаемый {{ user.nickname }},</p>
+<p>
+    Вы просили уведомить вас о
+    <a href="{{ url_for('reset_password', token=token, _external=True) }}"></a>.
+
+<p>С Уважением,</p>
+<p>Команда ReNote</p>

@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Registration</title>
-    <link rel="stylesheet" type="text/css" href="css_base_dark/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/css_base_dark/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="../static/js/Animation.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <div class="container">
     <div class="login-content">
-        <form style="margin-top: 10rem">
+        <form style="margin-top: 10rem" action="{{ url_for('checkout') }}" method="post">
+            {{ form.csrf }}
 
             <h2 class="title">Welcome!</h2>
             <div class="input-div one has-validation">
@@ -24,7 +25,7 @@
 
                 <div>
                     <h5>Username</h5>
-                    <input type="text" class="input">
+                    {{ form.nickname(class_='input') }}
                 </div>
 
             </div>
@@ -37,7 +38,7 @@
 
                 <div class="div">
                     <h5>Email</h5>
-                    <input type="email" class="input">
+                    {{ form.email(class_='input') }}
                 </div>
 
             </div>
@@ -50,7 +51,19 @@
 
                 <div class="div">
                     <h5>Password</h5>
-                    <input type="password" class="input">
+                    {{ form.password(class_='input') }}
+                </div>
+
+            </div>
+            <div class="input-div pass">
+
+                <div class="i">
+                    <i class="fas fa-lock"></i>
+                </div>
+
+                <div class="div">
+                    <h5>Repeat your password</h5>
+                    {{ form.repassword(class_='input') }}
                 </div>
 
             </div>
@@ -262,36 +275,14 @@
                         <option>Zambia</option>
                     </datalist>
                 </div>
-
             </div>
             <div style="padding: 2rem">
-                <input type="submit" class="btn" value="Sign Up">
+                {{ form.submit(class='btn') }}
             </div>
         </form>
     </div>
 
 </div>
-<script>
-    const inputs = document.querySelectorAll(".input");
-
-    function addcl() {
-        let parent = this.parentNode.parentNode;
-        parent.classList.add("focus");
-    }
-
-    function remcl() {
-        let parent = this.parentNode.parentNode;
-        if (this.value == "") {
-            parent.classList.remove("focus");
-        }
-    }
-
-
-    inputs.forEach(input => {
-        input.addEventListener("focus", addcl);
-        input.addEventListener("blur", remcl);
-    });
-
-</script>
+<script type="text/javascript" src="../static/js/main.js"></script>
 </body>
 </html>

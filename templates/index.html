@@ -6,11 +6,11 @@ Home page
 
 {% block content %}
 <h1>{{ contents[0].title }}</h1>
-{% for contents in contents %}
+
 <div>
-    <p><big>{{ contents.body }}</big></p>
+    <p><big>{{ contents[0].body }}</big></p>
 </div>
-{% endfor %}
+
 <div class="w-25 p-3 mx-auto">
     <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
     <p></p>
