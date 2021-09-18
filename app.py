@@ -52,11 +52,6 @@ def main():
     return render_template('main.html', summary=summary)
 
 
-# @app.route('/notification')
-# @login_required
-# def notification():
-#     user = current_user.last_notification_read_time = datetime.utcnow()
-
 @app.route('/reset_password_request', methods=['GET', 'POST'])
 def reset_password_request():
     if current_user.is_authenticated:
@@ -128,11 +123,6 @@ def login():
     return render_template("en/base_dark.html", form=form)
 
 
-# @app.route('/', methods=["GET", "POST"])
-# @login_required
-# def activate_notification():
-
-
 @app.route('/checkout', methods=["GET", "POST"])
 def checkout():
     form = SignUpForm()
@@ -151,12 +141,6 @@ def checkout():
         login_user(user)
         return redirect(url_for('new_summary'))
     return render_template('en/checkout_dark.html', form=form)
-#
-#
-# @app.route('/summary/<int:summary_id>', methods=["GET", "POST"])
-# def get_summary(summary_id):
-#     summary = Summary.query.filter_by(id=summary_id).all()
-#     return render_template('main.html', summary=summary)
 
 
 @app.route('/new_summary', methods=["GET", "POST"])
