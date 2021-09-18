@@ -18,7 +18,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db?check_same_thread=Fal
 app.config['SECRET_KEY'] = 'NeverGonnaGiveYouUP'
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'maxshlyahtin@gmail.com'
-app.config['MAIL_PASSWORD'] = 'Pp485221'
+app.config['MAIL_PASSWORD'] = '****'
 app.config['MAIL_PORT'] = 587
 app.config['ADMINS'] = 'mrekkhub@gmail.com'
 app.config['MAIL_DEFAULT_SENDER'] = 'mrekkhub@gmail.com'
